@@ -1,0 +1,139 @@
+//file-upload
+.file-upload{
+  .file-thumb{
+    float: left;
+    img{
+      width: 100px;
+    }
+  }
+  .upload-box{
+    float: left;
+    margin-left: 20px;
+    margin-top: 5px;
+    span.upload-btn{
+      width: 80px;
+      height: 30px;
+      border:1px solid #ccc;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    input[type="file"]{
+      cursor: pointer;
+      opacity: 0;
+      position: absolute;
+      width: 70px;
+      height: 30px;
+      z-index: 5;
+      margin-left: -11px;
+      margin-top: -6px;
+      font-size: 0;
+    }
+    .help-tips small{
+      margin-top: 10px;
+      font-size: 100%;
+      display: inline-block;
+    }
+  }
+}
+
+/* Asset upload (attachment or photo)， base on jquery upload */
+.asset-upload {
+  .help-block {
+    margin-top: 8px;
+  }
+
+  .asset-thumb {
+    float: left;
+    border: 1px solid #ccc;
+    width: 94px;
+    height: 70px;
+    margin: 2px;
+    position: relative;
+    overflow: hidden;
+    font-size: 0;
+    text-align: center;
+    &:hover {
+      border-color: red;
+      .remove {
+        display: block;
+      }
+    }
+    .inner {
+      display: table-cell;
+      width: 94px;
+      height: 70px;
+      vertical-align: middle;
+    }
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+    .message {
+      font-size: 12px;
+      display: inline-block;
+      em {
+        font-style: normal;
+      }
+    }
+    .progress {
+      position: absolute;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      margin-bottom: 0;
+      border-radius: 0;
+      height: 5px;
+
+      .progress-bar {
+        background-color: #3c8dbc;
+      }
+    }
+    .remove {
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 0;
+      width: 0;
+      color: white;
+      cursor: pointer;
+      border: 16px solid red;
+      border-left-color: transparent;
+      border-bottom-color: transparent;
+      line-height: 14px;
+      font-size: 14px;
+      text-decoration: none;
+      &:after {
+        content: '×';
+        font-family: "\5FAE\8F6F\96C5\9ED1", 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial;
+        display: block;
+        position: absolute;
+        top: -12px;
+        right: -12px;
+        color: white;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .asset-upload-btn {
+    position: relative;
+    float: left;
+    border: 1px solid #ccc;
+    width: 94px;
+    height: 70px;
+    margin: 2px;
+    background: image-url('/assets/genggeng_attachments/uploader-add.png') no-repeat center center #d3d3d3;
+    overflow: hidden;
+    input {
+      opacity: 0;
+      filter:Alpha(opacity=0);
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 400px;
+      height: 200px;
+      cursor: pointer;
+    }
+  }
+}
