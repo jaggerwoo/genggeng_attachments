@@ -27,5 +27,4 @@ class GenggengAttachment < ActiveRecord::Base
   def thumbnail_url
     attachment_file.thumbnail_url
   end
-
 end
