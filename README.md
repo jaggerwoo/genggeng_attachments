@@ -1,38 +1,57 @@
 # GenggengAttachments
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/genggeng_attachments`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Rails多附件上传功能, 
+依赖:
+- 'simple_form', "~> 3.2.1"
+- 'carrierwave', "~> 0.10"
+- 'mini_magick'
+- 'jquery-fileupload-rails'
+- 'turbolinks'
 
 ## Installation
 
-Add this line to your application's Gemfile:
+1. 修改 Gemfile 增加:
 
-```ruby
+```bash
+# Gemfile
 gem 'genggeng_attachments'
+    
+$ bundle
 ```
 
-And then execute:
+2. 生成基本配置文件：
 
-    $ bundle
 
-Or install it yourself as:
+```bash
+$ rails g genggeng_attachments:install
 
-    $ gem install genggeng_attachments
+then, add js file included 
+    
+//= require genggeng_attachments/application
 
-## Usage
+add css file included 
 
-TODO: Write usage instructions here
+*= require genggeng_attachments/application
+```
 
-## Development
+3. 自定义配置
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+```ruby
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+modify config/initializes/genggeng_attachments.rb
 
-## Contributing
+GenggengAttachments.configure do
+  self.upload_limit_nubmer = 3
+end
+```
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/genggeng_attachments. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+4. 在对应model中增加关联关系
+
+```ruby
+
+has_many :genggeng_attachments, as: :genggeng_attachmentable
+
+```
 
 
 ## License
