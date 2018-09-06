@@ -14,7 +14,8 @@ Rails多附件上传功能,
 
 ```bash
 # Gemfile
-gem 'genggeng_attachments'
+-gem 'genggeng_attachments'-
+gem 'genggeng_attachments', :git => 'git@github.com:WadeJG/genggeng_attachments.git', :branch => 'master'
     
 $ bundle
 ```
