@@ -15,7 +15,7 @@ class FilesUploadableInput < SimpleForm::Inputs::TextInput
       result = ''
       result += template.tag(:input, :type => 'hidden', :name => "#{@builder.object_name}[#{attribute_ids_name}][]", id: 'asset_ids')
       result += template.content_tag(:div, class: 'help-block') do
-        hint || "#{"最多可上传#{upload_limit}个," if upload_limit > 0}支持以下格式文件（doc docx xls xlsx pdf ppt pptx jpg jpeg png gif）"
+        hint || "#{"最多可上传#{upload_limit}个" if upload_limit > 0}(支持以下格式文件: doc docx xls xlsx pdf ppt pptx jpg jpeg png gif)"
       end
       result += template.content_tag(:div, class: 'asset-uploader') do
         r2 = ''
