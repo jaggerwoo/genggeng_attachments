@@ -1,6 +1,6 @@
 require "genggeng_attachments/version"
 require "genggeng_attachments/engine"
-require "genggeng_attachments/configration"
+require "genggeng_attachments/configuration"
 
 require "generators/genggeng_attachments/install_generator"
 
