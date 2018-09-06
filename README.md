@@ -54,6 +54,10 @@ has_many :genggeng_attachments, as: :genggeng_attachmentable
 
 ```
 
+5. 样式
+
+![](./app/assets/images/demo.png '样式')
+
 
 ## License
 
